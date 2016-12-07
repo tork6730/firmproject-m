@@ -4,13 +4,14 @@
     var app = angular.module('app', ['ui.router']);
 
     app.config(function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/client/client_home");
+        // $urlRouterProvider.otherwise("/client/client_home");
 
+$urlRouterProvider.otherwise("/attorney/attorney_home");
 
-        // $urlRouterProvider.otherwise("/attorney/attorney_home");
 
 
         // $urlRouterProvider.otherwise("/admin/admin_home");
+
 
 
 

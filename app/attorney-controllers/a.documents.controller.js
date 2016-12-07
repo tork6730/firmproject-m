@@ -6,20 +6,44 @@
         .controller('aDocumentsController', aDocumentsController);
 
 
-    aDocumentsController.$inject = ['dependencies'];
+    aDocumentsController.$inject = ['$http', 'mainFactory'];
 
 
 
 
     /* @ngInject */
-    function aDocumentsController(dependencies) {
+    function aDocumentsController($http, mainFactory) {
         var vm = this;
-        vm.title = 'Controller';
 
-        activate();
+        // activate();
 
-        ////////////////
 
-        function activate() {}
+        mainFactory.getDocuments('58476511e7f7b7bb495923a2').then(
+
+            function(response) {
+
+                // bind categories to the view
+                vm.documents = response;
+
+                console.log(response);
+
+                // get all the Roles that exist in the origin.API DB
+                // getRoles();
+
+            },
+
+            function(error) {
+
+                console.log(error);
+
+            });
+
+
     }
+
+
+
+    ////////////////
+
+
 })();
