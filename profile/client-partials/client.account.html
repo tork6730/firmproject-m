@@ -1,9 +1,24 @@
-<div class="container-fluid">
-    <h1>Profile</h1>
-    <div class="">
+<div class="container-fluid col-md-10 col-md-offset-1">
+    <div class="container-fluid col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title strong">Welcome {{name}}, Update your Information</h3>
+                <h1 class="">Your Current Information</h1>
+            </div>
+            <div class="panel-body">
+                <div ng-repeat="">{{Name}}</div>
+                <div ng-repeat="">{{Address}}</div>
+                <div ng-repeat="">{{City}}</div>
+                <div ng-repeat="">{{State}}</div>
+                <div ng-repeat="">{{Zip Code}}</div>
+                <div ng-repeat="">{{Username}</div>
+                <div ng-repeat="">{{Password}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1>Please update your information</h1>
             </div>
             <div class="panel-body">
                 <div>
@@ -37,22 +52,6 @@
                     </div>
                     <button class="btn btn-default" type="submit">Update</button>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title strong">Your Current Information</h3>
-            </div>
-            <div class="panel-body">
-                <div ng-repeat="">{{Name}}</div>
-                <div ng-repeat="">{{Address}}</div>
-                <div ng-repeat="">{{City}}</div>
-                <div ng-repeat="">{{State}}</div>
-                <div ng-repeat="">{{Zip Code}}</div>
-                <div ng-repeat="">{{Username}</div>
-                <div ng-repeat="">{{Password}}</div>
             </div>
         </div>
     </div>

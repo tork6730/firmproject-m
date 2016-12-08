@@ -5,24 +5,32 @@
         .module('app')
         .factory('mainFactory', mainFactory);
 
-    mainFactory.$inject = ['$http', '$q', ];
+    mainFactory.$inject = ['$http', '$q'];
 
     /* @ngInject */
     function mainFactory($http, $q) {
         var service = {
 
+            getDocuments: getDocuments,
             // getCategories: getCategories,
             // getCategoryNamesByRoleId: getCategoryNamesByRoleId,
             // getContentByCategoryId: getContentByCategoryId,
             // getContentByContentId: getContentByContentId,
             // getRoles: getRoles,
             // getUsers: getUsers,
-            getDocuments: getDocuments,
+
+
             // postCategory: postCategory,
             // postContent: postContent,
             // postContentCategory: postContentCategory,
 
-            // edit: edit
+            // editDocuments: editDocuments,
+            // editUsers: editUsers,
+            // editRoles: editRoles
+
+            // deleteDocuments: deleteDocuments,
+            // deleteUsers: deleteUsers
+
 
 
 
@@ -271,6 +279,133 @@
         //             defer.reject(error);
         //         });
         //     return defer.promise;
+        // }
+
+        // edit functions
+
+        // function editDocuments() {
+
+        //     var defer = $q.defer();
+
+        //     $http({
+        //         method: 'PUT',
+        //         url: ? +'documents?',
+        //         data: info,
+        //         headers: {
+        //             'Content-Type': 'application/x-www-form-urlencoded'
+        //         }
+        //     })
+
+        //     .then(function(response) {
+
+        //             if (typeof response.data === "object") {
+        //                 defer.resolve(response.data);
+        //             } else {
+        //                 defer.reject(response);
+        //             }
+        //         },
+        //         function(error) {
+        //             defer.reject(error);
+        //         });
+        //     return defer.promise;
+        // }
+
+        // function editUsers() {
+
+        //     var defer = $q.defer();
+
+        //     $http({
+        //         method: 'PUT',
+        //         url: ? +'api/users',
+        //         headers: {
+        //             'Authorization': 'Bearer ' + token
+        //         }
+        //     })
+
+        //     .then(function(response) {
+        //             if (typeof response.data === "object") {
+        //                 defer.resolve(response.data);
+        //             } else {
+        //                 defer.reject(response);
+        //             }
+        //         },
+        //         function(error) {
+        //             defer.reject(error);
+        //         });
+        //     return defer.promise;
+        // }
+
+        // function editRoles() {
+
+        //     var defer = $q.defer();
+
+        //     $http({
+        //         method: 'PUT',
+        //         url: ? +'api/roles',
+        //         headers: {
+        //             'Authorization': 'Bearer ' + token
+        //         }
+        //     })
+
+        //     .then(function(response) {
+        //             if (typeof response.data === "object") {
+        //                 defer.resolve(response.data);
+        //             } else {
+        //                 defer.reject(response);
+        //             }
+        //         },
+        //         function(error) {
+        //             defer.reject(error);
+        //         });
+        //     return defer.promise;
+        // }
+
+        // delete functions
+
+        // function deleteUsers() {
+
+        //     var defer = $q.defer();
+
+        //     $http({
+        //         method: 'DELETE',
+        //         url: originLoungeExpressAPIBaseURL + UserId
+        //     })
+
+        //     .then(function(response) {
+        //             if (typeof response.data === "object") {
+        //                 defer.resolve(response.data);
+        //             } else {
+        //                 defer.reject(response);
+        //             }
+        //         },
+        //         function(error) {
+        //             defer.reject(error);
+        //         });
+        //     return defer.promise;
+
+        // }
+
+        // function deleteDocuments() {
+
+        //     var defer = $q.defer();
+
+        //     $http({
+        //         method: 'DELETE',
+        //         url: originLoungeExpressAPIBaseURL + DocumentsId
+        //     })
+
+        //     .then(function(response) {
+        //             if (typeof response.data === "object") {
+        //                 defer.resolve(response.data);
+        //             } else {
+        //                 defer.reject(response);
+        //             }
+        //         },
+        //         function(error) {
+        //             defer.reject(error);
+        //         });
+        //     return defer.promise;
+
         // }
 
 
