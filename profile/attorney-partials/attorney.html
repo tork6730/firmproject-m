@@ -1,17 +1,20 @@
-<H1>Hello {{ name }}</H1>
-<header>
-    <ul class="nav nav-tabs">
-        <li ng-class="{active: activeTab === 'home'}"><a ui-sref="attorney.home">Home</a></li>
-        <li ng-class="{active: activeTab === 'clients'}"><a ui-sref="attorney.clients">Clients</a></li>
-        <li ng-class="{active: activeTab === 'cases'}"><a ui-sref="attorney.cases">Cases</a></li>
-        <li ng-class="{active: activeTab === 'documents'}"><a ui-sref="attorney.documents">Documents</a></li>
-        <li ng-class="{active: activeTab === 'account'}"><a ui-sref="attorney.account">Account</a></li>
-        <li><a href="/login" target="_self">Logout</a></li>
-    </ul>
-    <div class="flash-message" ng-if="flash">
+<div class="container-fluid col-md-10 col-md-offset-1">
+    <H1 class="text-center">Hello Attorney</H1>
+    <header>
+        <ul class="nav nav-tabs">
+            <li ng-class="{active: activeTab === 'home'}"><a ui-sref="attorney.home">Home</a></li>
+            <li ng-class="{active: activeTab === 'clients'}"><a ui-sref="attorney.clients">Clients</a></li>
+            <li ng-class="{active: activeTab === 'cases'}"><a ui-sref="attorney.cases">Cases</a></li>
+            <li ng-class="{active: activeTab === 'documents'}"><a ui-sref="attorney.documents">Documents</a></li>
+            <li class="pull-right"><a href="/login" target="_self"> Logout</a></li>
+            <li ng-class="{active: activeTab === 'account'}" class="pull-right"><a ui-sref="attorney.account">Account</a></li>
+            <!--         <li ng-class="{active: activeTab === 'account'}"><a ui-sref="attorney.account">Account</a></li>
+        <li><a href="/login" target="_self">Logout</a></li> -->
+        </ul>
+        <!--     <div class="flash-message" ng-if="flash">
         <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+    </div> -->
+    </header>
+    <div>
+        <div ui-view></div>
     </div>
-</header>
-<div id="aProfile" class="container">
-    <div ui-view></div>
-</div>

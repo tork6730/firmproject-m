@@ -1,74 +1,93 @@
-<style>
-.panel-heading h3 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: normal;
-    width: 75%;
-    padding-top: 8px;
-}
-</style>
-<h1>Home</h1>
 <div class="container-fluid">
-    <div class="panel panel-success">
-        <div class="panel-heading">
-            <h3 class="panel-title">Welcome {{name}}</h3>
-        </div>
-        <div class="panel-body col-sm-12">
-            <div>
-                <div>
-                    <div class="text-center">
-                        <label>Add Item</label>
-                        <a>
-                    </div>
+    <div class="">
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h1>Add Item</h1>
                 </div>
-                <div>
-                    <div class="col-sm-4 text-center">
-                        <label>Add Client</label>
-                        <a ng-model="a-Client" ng-click="">
-                    </div>
-                    <div class="col-sm-4 text-center">
-                        <label>Add Documents</label>
-                        <a ng-model="a-Documents" ng-click="">
-                    </div>
-                    <div class="col-sm-4 text-center">
-                        <label>Add Case</label>
-                        <a ng-model="a-Case" ng-click="">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <div class="col-md-6 text-center form-group">
+                                <label>Add Client</label>
+                                <button><img id="person" src="img/image-of-person-sspeck-hi.png"></button>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <label>Add Case</label>
+                                <button><img id="case" src="img/folder-icon.jpg"></button>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="col-md-6 text-center">
+                                <label>Add Bill</label>
+                                <button><img id="invoice" src="img/invoices-icon-22.png"></button>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <label>Add Attorney</label>
+                                <button><img ng-click="" id="attorney" src="img/attorney.png"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="col-sm-4 text-center">
-                    <label>Add Message</label>
-                    <a ng-model="a-Messages" ng-click="">
+        </div>
+        <form class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h1>Contact Client</h1>
                 </div>
-                <div class="col-sm-4 text-center">
-                    <label>Add Bill</label>
-                    <a ng-model="a-Bill" ng-click="">
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Subject</label>
+                        <input type="text" class="form-control" id="subjectInput" placeholder="What can we help you with?">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Explain</label>
+                        <textarea type="text" class="form-control" rows="3" placeholder="Please Explain..."></textarea>
+                    </div>
+                    <div class="form-group pull-right">
+                        <label for="">Choose a Client/Case</label>
+                        <select></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" id="exampleInputFile">
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <div class="checkbox pull-right">
+                        <label>
+                            <input type="checkbox"> Would you like an email copy of this message?
+                        </label>
+                    </div>
                 </div>
-                <div class="col-sm-4 text-center">
-                    <label>Add Attorney</label>
-                    <a ng-model="a-Attorney" ng-click="">
-                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <div class="col-md-12">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h1>Recents Activity</h1>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Cases</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td ng-repeat={{}}></td>
+                            <td ng-repeat={{}}></td>
+                            <td ng-repeat={{}}></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid">
-    <div class="panel panel-success">
-        <div class="panel-heading">
-            <h3 class="panel-title pull-left">Recent Activity</h3>
-            <div class="btn-group pull-right">
-                <button type="button" id="" ng-model="a-AllRecent" ng-click="" class="btn btn-default">All</button>
-                <button type="button" ng-model="a-RecentCases" ng-click="" class="btn btn-default">Cases</button>
-                <button type="button" ng-model="a-RecentDocs" ng-click="" class="btn btn-default">Documents</button>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="panel-body col-sm-12">
-</div>
-</div>
 </div>

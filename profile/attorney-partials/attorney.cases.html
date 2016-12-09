@@ -1,31 +1,33 @@
 <div class="container-fluid">
     <div class="panel panel-success">
         <div class="panel-heading">
-            <h3 class="panel-title pull-left">Cases</h3>
+            <h1 class="pull-left">Cases</h1>
             <div class="btn-group pull-right">
-                <button type="button" id="a-CaseDocs" ng-model="a-CaseDocs" ng-click="" class="btn btn-default">Add Cases</button>
+                <button type="button" id="" ng-model="" ng-click="" class="btn btn-default">Add Cases</button>
             </div>
             <div class="clearfix"></div>
         </div>
+        <div class="panel-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Case</th>
+                        <th>Client</th>
+                        <th>Phone Number</th>
+                        <th>Documents</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td ng-repeat={{}}></td>
+                        <td ng-repeat={{}}></td>
+                        <td ng-repeat={{}}></td>
+                        <td ng-repeat={{}}></td>
+                        <td ng-repeat={{}}></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>Case</th>
-                <th>Client</th>
-                <th>Phone Number</th>
-                <th>Documents</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td ng-repeat={{}}></td>
-                <td ng-repeat={{}}></td>
-                <td ng-repeat={{}}></td>
-                <td ng-repeat={{}}></td>
-                <td ng-repeat={{}}></td>
-            </tr>
-        </tbody>
-    </table>
 </div>
